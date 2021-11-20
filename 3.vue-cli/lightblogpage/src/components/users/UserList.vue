@@ -1,5 +1,5 @@
 <template>
-  <table class="table table-striped table-hover custome-form">
+  <table class="table  custome-form">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -35,5 +35,8 @@ export default {
   .custome-form{
   width :80%;
   margin: 2% 5% ;
+}
+inactive::hover{
+  color:white;
 }
 </style>
