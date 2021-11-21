@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .custome-form{
   width :80%;
   margin: 2% 5% ;

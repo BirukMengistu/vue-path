@@ -23,6 +23,7 @@ export default {
     CLEAR_POST: state => {
       state.post = null
     },
+    
     SEARCH: (state, val) => {
       state.searchVal = val
     }

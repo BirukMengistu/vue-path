@@ -39,7 +39,7 @@ computed:{
 
 </script>
 
-<style>
+<style scoped>
 .fa-trash{
     border: 0 none transparent;
     outline: transparent;

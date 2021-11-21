@@ -32,10 +32,10 @@ methods:{
 
 </script>
 
-<style>
 
-</style>
-<style>
+<style scoped>
+
+
 .custome-border{
     border: none;
     border-bottom: 2px solid darkblue !important;

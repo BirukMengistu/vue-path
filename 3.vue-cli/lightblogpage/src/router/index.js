@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import blog from '../views/Blog.vue'
-import user from '../views/User.vue'
+import Blog from '../views/Blog.vue'
+import Blogdetails from '../views/BlogDetails.vue'
+import User from '../views/User.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,13 +14,20 @@ const routes = [
   },
   {
     path: '/blog',
-    name: 'blog',
-    component: blog
+    name: 'Blog',
+    component: Blog
+  },
+  {
+    path: '/Blog/post/:id',
+    name: 'Blogdetails',
+    component: Blogdetails,
+    props: { default: true }     
+       
   },
   {
     path: '/user',
-    name: 'user',
-    component: user
+    name: 'User',
+    component: User
   }
 ]
 
