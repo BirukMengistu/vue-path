@@ -1,20 +1,17 @@
 <template>
     <div class="blog bg-light ">
         <h1  class="text-center mt-2">Our Blog post</h1>
-          <div class=" container justify-content-sm-center mt-2">
-              <router-link  class="card" v-for='post in posts' :key='post.id' :to="{name : 'Blogdetails' , params: { id : post.id }}"> 
-                <div class=" hover-shadow m-2">
+          <div class="container justify-content-sm-center mt-2">
+              
+                 <router-link class='card' v-for='post in posts' :key='post.id' :to="{name : 'Blogdetails' , params: { id : post.id }}"> 
+                    <div class=" hover-shadow m-2">
                      <h3>{{ post.title }}</h3>
-                      <p>{{post.body | short}} </p>
-                      <div class="social-media  d-flex flex-row">
-                     <i class="fa fa-share"></i>
-                     <i class="fab fa-google-plus"></i>  
-                     <i class="fab fa-twitter" ></i>
-                    <i class="fab fa-facebook-f"></i>
+                      <p>{{post.body | short}} </p>                
                    </div>
-                  
-              </div>
-              </router-link>
+                    
+                </router-link>
+              
+                            
              
           </div>
     </div>
@@ -41,7 +38,7 @@ export default ({
    }
 })
 </script>
-<style>
+<style scoped>
 .blog{
     width:100%;
     display: flex;
@@ -57,20 +54,7 @@ export default ({
     color: dodgerblue;
 
 }
-.social-media{
-    display: flex;
-    flex-direction:row;
-    justify-content: end;
-    color:rgb(8, 0, 15);
- 
-}
-.social-media .fab, .social-media .fa{
- padding: 1.2rem 1.5rem;
-}
-  .social-media .fab:hover{
-  transform: scale(1.2);
-  color: rgb(7, 136, 3);
-  }
+
 .container div h3{
     text-transform: uppercase;
      padding: 0.8rem 0.5rem;
@@ -91,4 +75,5 @@ div p{
      margin: 2rem;
      border-radius: 8px 1px;
 }
+
 </style>
