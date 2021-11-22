@@ -1,0 +1,25 @@
+*,*::after,*::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box-info{
+    width: 720px;
+    height: 700px;
+    align-content: center;
+    position: relative;
+    border: 1px solid green;
+    background-color: rgb(128, 202, 231);
+    margin: 120px;
+}
+.header{
+    text-align: center;
+    background-color: rgb(3, 59, 82);
+    height: 2.3rem;
+    align-content: center;
+    padding: 5px;
+}
