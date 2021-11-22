@@ -23,7 +23,7 @@
             <router-link class="nav-link" active-class="active" aria-current="page" to="/blog">Blog</router-link>
           </li>
         </ul>
-        <form  class="d-flex input-group w-auto">
+        <form  @submit.prevent='handleSearch' class="d-flex input-group w-auto">
           <input
             type="search"
             class="form-control rounded"
@@ -31,6 +31,7 @@
             aria-label="Search"
             aria-describedby="search-addon"
             v-model="searchVal"
+           
           />
           <button class="input-group-text border-0" id="search-addon">
             <i class="fas fa-search"></i>
@@ -40,3 +41,22 @@
     </div>
   </nav>
 </template>
+
+<script>
+
+import { mapActions } from 'vuex'
+
+export default {
+   data(){
+     return {
+       searchVal:''
+       }
+   },
+   methods:{
+     ...mapActions(['search']),
+     handleSearch(){
+      this.searchVal(this.searchVal)
+     }
+   }
+}
+</script>

@@ -16,9 +16,12 @@
                      <i class="fab fa-google-plus"></i>  
                      <i class="fab fa-twitter" ></i>
                     <i class="fab fa-facebook-f"></i>
-                   </div>
+            </div>
         </span>
     </div>
+    <button  @click='backtoBlog' class='btn btn-danger m-2'>
+      <i class="fa fa-times"> Back to Blogs</i>
+    </button>
 </div>
 
 </template>
@@ -29,14 +32,19 @@ export default {
    
   props: ['id'],
   computed: {
-       ...mapGetters(['post'])  
+       ...mapGetters(['post', ''])  
    },
    methods: {
-       ...mapActions(['getPost'])
+       ...mapActions(['getPost','clearPost']),
+     backtoBlog() {
+     this.$router.push('/Blog/')
+   }
    }, 
    created()  {
     this.getPost(this.$route.params.id);
    }
+   
+   
 
 }
 </script>
